@@ -76,14 +76,16 @@
 
 <body>
     <header class="top-header">
-        <h1 class="name">Nina Carducci</h1>
-        <ul class="nav">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#gallery">Galerie</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" width="20" height="20" alt="instagram logo"></a></li>
-        </ul>
+        <h1 class="name">Nina Carducci</h1> <!--Balise h3 en h1-->
+        <div class="nav"> <!--Changer balise div en nav-->
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="lien vers instagram"><img src="assets/images/instagram.webp" width="20" height="20" alt="instagram logo"></a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -175,7 +177,7 @@
             <div class="container py-3">
                 <div class="gallery" style="display:none">
                     <img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" loading="lazy" alt="foule qui regarde un concert">
-                    <img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"loading="lazy" alt="Photo d'un homme d'affaires, en costard, cravate rouge et montre croisant les bras">
+                    <img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" loading="lazy" alt="Photo d'un homme d'affaires, en costard, cravate rouge et montre croisant les bras">
                     <img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" loading="lazy" alt="Photo d'une femme qui rigole au travail">
                     <img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" loading="lazy" alt="Les mains se touchant, symbole d'union et d'amour entre les mariés.">
                     <img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" loading="lazy" alt="Portrait d'un homme fermant les yeux">
@@ -188,18 +190,19 @@
             <div class="quote">
                 <figure>
                     <blockquote>
-                        <h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
+                        <!--Balise changée h1 en p-->
+                        <p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un
                             fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude
                             n’existe pas en photographie. Toutes les photos sont exactes.
                             Aucune d’elles n’est la vérité.
-                        </h1>
+                        </p>
                     </blockquote>
                     <figcaption class="quote__author">- Richard Avedon</figcaption>
                 </figure>
             </div>
         </section>
         <section id="services">
-            <h2 class="title">Mes services</h2>
+            <h2 class="title">Mes services</h2> <!--Balise h3 changée en h2-->
             <div class="container">
                 <div class="service">
                     <div class="service__description">
@@ -242,6 +245,7 @@
         <div class="quote">
             <figure>
                 <blockquote>
+                    <!--Balise changée h1 en p-->
                     <p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des
                         traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie
                     </p>
@@ -252,15 +256,15 @@
         <footer id="contact">
             <div class="container">
                 <div class="form-container">
-                    <h2>Une question ? Une demande de devis ?</h2>
+                    <h2>Une question ? Une demande de devis ?</h2> <!--Balise changée h3 en h2-->
                     <p>N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-                    <form action="." method="post">
+                    <form action="mailto:ninacarducci@gmail.com" method="post"> <!--Ajout redirection mail + des attributs for pour les balises label, required pour input-->
                         <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom">
+                        <input type="text" name="nom" id="nom" required>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <label for="message">Message</label required>
+                        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
                         <input type="submit" value="Envoyer">
                     </form>
                 </div>
